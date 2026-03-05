@@ -33,7 +33,7 @@ const respond = (id: RequestMessage["id"], result: object | null) => {
   const messageLength = Buffer.byteLength(message, "utf-8");
   const header = `Content-Length: ${messageLength}\r\n\r\n`;
 
-  log.write(header + message);
+  // log.write(header + message);
   process.stdout.write(header + message);
 };
 
